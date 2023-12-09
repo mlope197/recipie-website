@@ -1,0 +1,545 @@
+
+/* 
+background colors: 
+#0d0d0d - black
+#f2f2f2 - white
+#7abfbf - light blue
+rgba (122, 191, 191, .5) - light light blue
+#Eb5428 - orange
+*/
+
+/* START OF GLOBAL STYLES----------------------------------------------- */
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  }
+
+html{
+    background-color: rgba(122, 191, 191, .5);
+    width: 414px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: #f2f2f2;
+    min-width:320px;
+    margin: 0 auto;
+}
+
+h1,h2,h3{
+    font-family: Bebas Neue;
+    text-align: center;
+}
+
+h1{
+    font-size: 40px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+nav a{
+    font-size:20px;
+    font-family: Bebas Neue;
+
+}
+
+header li, nav li, .connect li{
+    font-family: Bebas Neue;
+    font-size: 20px;
+}
+
+.connect li{
+    font-size: 20px;
+}
+
+footer{
+    font-size: 20px;
+}
+
+p,dd,li,nav,input{
+    font-family: Montserrat;
+    font-size: 16px;
+}
+
+dt{
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+img{
+    width: 414px;
+    height: auto;
+}
+
+
+/* END OF GLOBAL STYLEs---------------------------------------------------------------------------- */
+
+/* START OF HEADER ===============================================================================================*/
+
+header{
+    padding-top: 150px;
+}
+
+header ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+  }
+  
+header li {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    text-align: center; /* Centers text */
+    justify-content: center;
+    color: #Eb5428;
+}
+  
+  /* END OF HEADER========================================================================================================= */
+
+/* WELCOME SECTION======================================================================= */
+
+.welcome p{
+    padding: 10px;
+    color: #0d0d0d;
+    font-weight: 400;
+    line-height: 2em;
+}
+
+/* DETAILS SECTION====================================================================================== */
+
+    .details{
+        padding: 10px;
+    }
+
+    .details dl{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .details dt, .details dd {
+        flex: 1 1 50%; /* Two columns for dt and dd */
+        padding: 5px;
+        margin: 0;
+}
+
+/* Ingredients======================================================================================== */
+    ul,ol{
+        padding: 30px;
+    }
+
+    .ingredients ul{
+        list-style: square;
+    }
+    
+    .ingredients li{
+        padding-bottom: 10px;
+    }
+
+/* Directions==================================================================================================== */
+
+    .directions li{
+        padding-left: 10px;
+        padding-bottom: 15px;
+    }
+
+
+/* SIDE DISHES================================================================================= */
+.side_dish{
+    background-color: #7abfbf;
+  }
+  
+  .side-dish-quad section{
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .side_dish section h3{
+    text-align:left;
+  }
+  .side_dish img{
+    max-width: 100%;
+    height: auto;
+    grid-row: 1 / span 3;
+}  
+/* NAV BAR */
+
+/* to put nav ontop of page */
+    .main_nav {
+        position: absolute;
+        top: 0;
+        z-index: 9999; 
+
+    }
+
+    .search {
+        right: 20px;
+    }
+
+ 
+ 
+#knife svg{
+    background-color: #Eb5428;
+}
+.toggle-input {
+    display: none;
+}
+
+/* Style the label as the icon */
+.toggle-label {
+    cursor: pointer;
+    /* Style your SVG icon here */
+}
+
+/* Hide the menu by default */
+.menu {
+    display: none;
+    list-style: none;
+}
+
+
+
+/* Show the menu when checkbox is checked */
+.toggle-input:checked + .toggle-label + nav .menu{
+    display: block;
+}
+
+/* Hide the h2 and h3 elements inside nav */
+nav h2, nav h3 {
+    display: none;
+}
+
+nav img {
+    max-width: 20%;
+    height: auto;
+}
+
+/* Additional styles for the search section */
+.search {
+    margin-top: 20px;
+}
+
+    /* search bar */
+    .search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 200px;
+    }
+    .search input{
+        border-color: #Eb5428;
+        height:46px;
+    }
+    .search button{
+        background-color: #Eb5428;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-color: #Eb5428;
+    }
+
+    .search h3{
+        display: none;
+    }
+/* socials */
+
+    .connect ul{
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 10px;
+    }
+
+    .connect li {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers items horizontally */
+        text-align: center; /* Centers text */
+        justify-content: center;
+        color: #Eb5428;
+    }
+
+    /* footer */
+
+        footer h3{
+            visibility: hidden;
+            background-color: #7abfbf;
+        }
+        footer .copyright{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer p, footer small{
+            text-align: center;
+            font-family: Bebas Neue;
+            font-size: 22px;
+        }
+
+        footer img{
+            max-width: 50%;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+/* first breakpoint (768 px)-============================== */
+
+@media screen and (min-width:768px){
+
+    html{
+        width: 768px;
+    }
+
+    .main_nav{
+        max-width: 768px;
+        margin-bottom: 20px;
+
+    }
+
+    .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: #ffffff;
+    
+    }
+
+    .menu li{
+        display: flex;
+        flex-direction: column;
+        color:#Eb5428;
+        padding-top: 60px;
+    }
+
+    #knife{
+        position: absolute;
+        bottom: 140px;
+        background-color: #Eb5428;
+        padding: 10px;
+        left: 0px;
+    }
+
+    
+
+    #icon{
+        position: absolute;
+        bottom: 150px;
+        left:700px;
+    }
+
+    nav img{
+        max-width: 70%;
+        justify-content: center;
+    }
+
+    .toggle-label {
+       
+        display: none;
+    }
+
+
+    label{
+        display: none;
+    }
+
+    .search{
+        
+        left: 370px;
+        bottom: 150px; 
+    }
+    /* header */
+    img{
+        width: 768px;
+    }
+
+    header{
+        margin-top: 68px;
+    }
+
+    header ul{
+        position: relative;
+        top: 85px;
+        background-color: rgba(255, 255, 255, 0.5);
+
+    }
+
+    header h1{
+        text-align: left;
+        margin-bottom: -90px;
+        padding-left: 10px;
+    }
+
+    .details{
+        text-align: center;
+    }
+
+    .recipe{
+        padding-top: 15px;
+        display: flex;
+    }
+
+    .side-dish-quad{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+    
+      .side_dish section {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 20px;
+        
+    }
+
+    .connect {
+        order: 1;
+    }
+
+   .connect ul{
+    padding: unset;
+   }
+
+    footer .copyright{
+        order: -1;
+        align-items: unset;
+        margin-left: 0px;
+    }
+
+    footer p, footer small{
+        text-align: left;
+    }
+    
+
+
+}   
+
+@media screen and (min-width:1280px){
+    html{
+        width:1280px;
+    }
+    ul{
+        padding: unset;
+    }
+    .main_nav{
+        width: 1280px;
+    }
+
+    .menu{
+        width: 1280px;
+     
+    }
+
+    .menu li{
+        padding-top: unset;
+        text-align: center;
+    }
+    
+    #knife, #icon{
+        position: unset;
+    }
+
+    .search{
+        bottom: -105px;
+        left: 562px;
+    }
+
+    header {
+        margin-top: 125px;
+    }
+
+    .header-body{
+        margin-top: 100px;
+        display: flex;
+    }
+
+    header ul{
+        background-color: #ffffff;
+        outline-color: #Eb5428;
+        display: flex;
+        flex-direction: column;
+        margin-top: -85px;
+        margin-bottom: 84px;
+
+    }   
+
+    .welcome{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header h1{
+        text-align: center;
+    }
+
+    header img{
+        max-width: 45%;
+    }
+
+    .details{
+        padding: unset;
+    }
+
+    .details h2{
+        background-color: #0d0d0d;
+        color:#7abfbf;
+    }
+
+    .details dl{
+        flex-wrap: nowrap;
+        background-color: #0d0d0d;
+    }
+
+    .details dd, .details dt{
+        color: #7abfbf;
+    }
+
+    .ingredients ul{
+        padding: unset;
+        padding-left: 30px;
+        
+    }
+
+    .directions ol{
+        padding: unset;
+        padding-left: 40px;
+    }
+  
+    .side-dish-quad img{
+        max-width: 70%;
+    }
+    .side_dish section{
+        
+        display: flex;
+    }
+
+    .side-dish-quad section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer{
+        padding-top: 20px;
+    }
+
+    
+}   
